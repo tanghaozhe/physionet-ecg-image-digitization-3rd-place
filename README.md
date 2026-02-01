@@ -17,7 +17,9 @@ Detailed solution description: [3rd Place Solution Writeup](https://www.kaggle.c
 ### Acknowledgments
 
 The Stage 0 and Stage 1 implementations are adapted from:
-- **hengck23's Kaggle notebook**: [ECG Image Digitization - Demo Submission](https://www.kaggle.com/code/hengck23/demo-submission)
+- **hengck23's Kaggle notebook**: [ECG Image Digitization - Demo Submission](https://www.kaggle.com/code/hengck23/demo-submission) 
+
+**Checkpoints**: Download `stage0-last.checkpoint.pth` and `stage1-last.checkpoint.pth` from [hengck23's Kaggle Dataset](https://www.kaggle.com/datasets/hengck23/hengck23-demo-submit-physionet) and place them in `checkpoints/`
 
 ## Repository Structure
 
@@ -155,8 +157,7 @@ python data_preparation/generate_masks.py --workers 16
 Once data preparation is complete, you can train Stage 2 models:
 
 ```bash
-# Example training command (to be implemented)
-python train_stage2.py --config configs/stage2.py --fold 0
+python train.py
 ```
 
 ## Model Architectures
@@ -167,11 +168,3 @@ Multiple architectures supported:
 - **HRNet**
 - **ConvNeXt V2** (best performance)
 - **EfficientNetV2**
-
-
-## Key Features
-
-1. **Coordinate Convolution (CoordConv)**: Adds coordinate channels to help the model understand spatial positions
-2. **Test-Time Augmentation (TTA)**: Uses 4 flips during inference for robust predictions
-3. **Wilson's Term Correction**: Enforces physical constraint I + III = II
-4. **Multi-model Ensemble**: Combines predictions from multiple architectures

@@ -1,8 +1,16 @@
-# https://www.kaggle.com/code/hengck23/demo-submission
-
 #!/usr/bin/env python3
 """
 Prepare Stage 2 inputs: rectified images (4400x1700).
+
+This script is adapted from hengck23's Kaggle notebook:
+https://www.kaggle.com/code/hengck23/demo-submission
+Original code licensed under Apache 2.0 License.
+
+Modifications:
+- Integrated Stage 0 and Stage 1 into a single script
+- Added high-resolution rectification (4400x1700)
+- Added multi-processing support
+- Reorganized code structure for standalone usage
 
 This script:
 1. Stage 0: Keypoint detection + normalization
