@@ -3,8 +3,6 @@ import numpy as np
 import albumentations as A
 from albumentations.core.transforms_interface import ImageOnlyTransform
 
-from noise import pnoise2
-
 class AddPerlinDirt(ImageOnlyTransform):
     def __init__(self, scale_factor=4, p=0.5):
         super().__init__(p=p)

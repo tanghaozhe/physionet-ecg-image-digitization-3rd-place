@@ -1,7 +1,10 @@
 import os
 
+# Get project root directory (parent of configs/)
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 class BaseConfig:
-    project_root = "/mnt/slurm-home/k_to/Kaggle/PhysioNet"
+    project_root = PROJECT_ROOT
     data_dir = os.path.join(project_root, "data")
     output_dir = os.path.join(project_root, "outputs")
 

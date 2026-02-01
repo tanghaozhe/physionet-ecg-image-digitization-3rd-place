@@ -23,30 +23,44 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+pip-wheel-metadata/
 
 # Jupyter Notebook
 .ipynb_checkpoints
 *.ipynb_checkpoints/
+*.ipynb_checkpoints
 
 # PyCharm
 .idea/
+*.iml
 
 # VSCode
 .vscode/
+*.code-workspace
 
 # Data directories
 data/
+!data/.gitkeep
 
 # Model checkpoints and outputs
 outputs/
-# *.pth
+checkpoints/*.pth
 *.ckpt
 *.pt
+*.safetensors
+
+# Generated files
+*.npy
+*.npz
+*.rect.png
+*.norm.png
 
 # Logs
 *.log
 logs/
 wandb/
+tensorboard/
+runs/
 
 # Temporary files
 *.tmp
@@ -54,9 +68,20 @@ wandb/
 *.swp
 *~
 .DS_Store
+Thumbs.db
 kaggle/
 
 # Debug files
 debug_*.py
 debug_*.png
 test_*.py
+
+# Frog directory (to be removed)
+frog/
+
+# Large files
+*.tar
+*.tar.gz
+*.zip
+*.rar
+*.7z
